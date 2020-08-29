@@ -27,6 +27,30 @@
     <PackageReference Include="System.Memory" Version="4.5.4" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <PackageReference Include="Microsoft.Toolkit.HighPerformance">
+      <Version>6.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.Toolkit.HighPerformance">
+      <Version>6.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <PackageReference Include="Microsoft.Toolkit.HighPerformance">
+      <Version>6.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.6'">
+    <PackageReference Include="Microsoft.Toolkit.HighPerformance">
+      <Version>6.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
+
   <PropertyGroup Condition="$(TargetFramework) == 'netcoreapp3.0' OR $(TargetFramework) == 'netcoreapp3.1' OR $(TargetFramework) == 'netcoreapp5.0'">
     <DefineConstants>FCL_BITOPS;INTRINSICS;SPANSTACKALLOC</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
